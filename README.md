@@ -4,7 +4,7 @@ A self-directed home lab built on an Ubuntu VM (VirtualBox). It deploys the [Waz
 
 > **Attribution:** This project uses the public repository [Atlantium-AI/wazuh-n8n-lab-setup](https://github.com/Atlantium-AI/wazuh-n8n-lab-setup). This repository documents my own production, with screenshots as evidence.
 
-📄 **Full report with annotated screenshots:** [`SOC_Lab_Report_Complete.docx`](SOC_Lab_Report_Complete.docx)
+📄 **Full report with annotated screenshots:** [`SOC_Lab_Report_Complete.pdf`](SOC_Lab_Report_Complete.pdf)
 
 ## Architecture
 
@@ -47,29 +47,6 @@ Ubuntu VM (VirtualBox, NAT)
 8. **Installed Postman** with the repository's `install-postman.sh`.
 9. **Called the Wazuh APIs from Postman:** authenticate (token stored by a post-response script), list agents, and search alerts in the Indexer (`wazuh-alerts-4.x-*`, 1,209 hits at the time).
 10. **Built an n8n AI agent workflow** ("Wazuh Agent"): chat trigger → AI Agent (Google Gemini chat model, simple memory, HTTP Request tool that fetches the 20 newest alerts from the Indexer) → written alert summary in the chat.
-
-## Screenshots
-
-| # | Evidence | File |
-|---|---|---|
-| 1 | VirtualBox network settings (NAT) | [`01-virtualbox-network.png`](screenshots/01-virtualbox-network.png) |
-| 2 | git installed and lab repo cloned | [`02-clone-repo.png`](screenshots/02-clone-repo.png) |
-| 3 | Repo contents and Docker version | [`03-repo-contents-docker.png`](screenshots/03-repo-contents-docker.png) |
-| 4 | Wazuh and n8n containers running | [`04-docker-ps.png`](screenshots/04-docker-ps.png) |
-| 5 | Wazuh dashboard, no agents yet | [`05-wazuh-dashboard-no-agents.png`](screenshots/05-wazuh-dashboard-no-agents.png) |
-| 6 | Wazuh agent installation | [`06-wazuh-agent-install.png`](screenshots/06-wazuh-agent-install.png) |
-| 7 | n8n workspace (initial, empty) | [`07-n8n-workflows-empty.png`](screenshots/07-n8n-workflows-empty.png) |
-| 8 | auditd enabled and running | [`08-auditd-enabled.png`](screenshots/08-auditd-enabled.png) |
-| 9 | Wazuh shows 1 active agent | [`09-wazuh-agent-active.png`](screenshots/09-wazuh-agent-active.png) |
-| 10 | PowerShell + Invoke-AtomicRedTeam installed | [`10-atomic-red-team-install.png`](screenshots/10-atomic-red-team-install.png) |
-| 11 | Atomic tests launched | [`11-atomic-tests-run.png`](screenshots/11-atomic-tests-run.png) |
-| 12 | Postman installed via lab script | [`12-postman-install.png`](screenshots/12-postman-install.png) |
-| 13 | Wazuh API authentication (token redacted) | [`13-postman-wazuh-authenticate.png`](screenshots/13-postman-wazuh-authenticate.png) |
-| 14 | List Agents API call | [`14-postman-list-agents.png`](screenshots/14-postman-list-agents.png) |
-| 15 | Indexer Search Alerts call | [`15-postman-search-alerts.png`](screenshots/15-postman-search-alerts.png) |
-| 16 | n8n AI agent workflow | [`16-n8n-ai-agent-workflow.png`](screenshots/16-n8n-ai-agent-workflow.png) |
-
-![n8n AI agent workflow summarising Wazuh alerts](screenshots/16-n8n-ai-agent-workflow.png)
 
 ## Results
 
