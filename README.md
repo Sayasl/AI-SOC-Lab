@@ -55,14 +55,6 @@ Ubuntu VM (VirtualBox, NAT)
 - Both the Wazuh Management API and the Indexer API returned **200 OK** in Postman.
 - An n8n AI agent fetched the 20 newest alerts from the Indexer and produced a chat summary.
 
-## Next Steps
-
-- [ ] Run Atomic tests one technique at a time and record the matching Wazuh alert for each
-- [ ] Compare the AI agent's summaries with the raw alerts to check accuracy
-- [ ] Build an alert-triggered n8n workflow (Wazuh → webhook → notification/ticket)
-- [ ] Configure Wazuh to collect auditd logs
-- [ ] Add a detection table (technique → rule ID → alert level)
-
 ## Skills Practised
 
 Docker-based SIEM deployment · Wazuh agent management · Linux auditing (auditd, systemd) · Adversary emulation setup (Atomic Red Team) · REST API testing with Postman (tokens, environments, Indexer queries) · n8n AI agent automation · MITRE ATT&CK awareness · Lab isolation, redaction and technical documentation
